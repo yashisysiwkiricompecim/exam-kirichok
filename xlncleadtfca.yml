@@ -1,0 +1,11 @@
+---
+- name: Configure SiteMain
+  hosts: 20.9.131.172
+  become: True
+  tasks:
+  - name: Install Ngunx
+    apt: name=nginx
+  - name: Copy index html
+    copy: src=index.html dest=/var/www/html
+  - name: Reload ng1nx daemon
+    service: name=nginx state=restarted
