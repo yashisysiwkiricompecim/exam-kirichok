@@ -1,0 +1,96 @@
+pipeline {
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        skipDefaultCheckout(true)
+    }
+    stages {
+        stage('~ SiteMain: Drywashimoppe extraplused debuucampvvdrekyy') {
+            steps {
+               echo " --- SiteMain: RESETTING PATH COME TO HOME ---"
+               sh "cd ~"
+               echo " --- SiteMain: RESETTING PATH COME TO HOME RECITRADED ---"
+               echo " --- SiteMain: EXPUNGING SHORTED REPLIC INPUTS ---"
+               sh "rm -Rf ./zbovrtel/*"
+               sh "rm -Rf ./zbovrtel/.git"
+               sh "rm -Rf ./oyscwduvp/*"
+               sh "rm -Rf ./oyscwduvp/.git"
+               echo " --- SiteMain: EXPUNGING SHORTED REPLIC INPUTS SETTIEMIHTLIYEVVED ---"
+            }
+        }
+        
+        stage('~ SiteMain: Clomme aroclone snowclone') {
+            steps {
+               echo "--- SiteMain: CLONE CYCLONE REPOCOPY ---"
+               sh "git clone -b main https://gitlab.com/staskuznetsov/site.git ./zbovrtel"
+               echo "--- SiteMain: CLONE CYCLONE REPOCOPY SETTIEMIHTLIYEVVED ---"
+            }
+        }
+                    
+        stage('~ SiteMain: Regignnesyz hiscreato breilyetbarbeill') {
+            steps {
+                echo "--- SiteMain: SCRIBBLING PAYLOAD WHATITS --- "
+                sh 'echo "---" > ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "- name: Configure SiteMain" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  hosts: jynnwuylgqnm@20.9.131.172" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  become: True" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  tasks:" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  - name: Install Ngunx" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "    apt: name=nginx" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  - name: Copy index html" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "    copy: src=index.html dest=/var/www/html" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "  - name: Reload ng1nx daemon" >> ./zbovrtel/xlncleadtfca.yml'
+                sh 'echo "    service: name=nginx state=restarted" >> ./zbovrtel/xlncleadtfca.yml'
+                echo "--- SiteMain: SCRIBBLING PAYLOAD WHATITS SETTIEMIHTLIYEVVED --- "
+                }  
+            }
+                                            
+        stage('~ SiteMain: Tenubawgk exntlsplarrav gtapslhnr') {
+            steps {
+                echo "--- SiteMain: TWIDDLING SCRIPTUCRYPTOUM GRASTUITHOMK ---"
+                sh "ansible-playbook -i ~/hosts ./zbovrtel/xlncleadtfca.yml"
+                echo "--- SiteMain: TWIDDLING SCRIPTUCRYPTOUM GRASTUITHOMK SETTIEMIHTLIYEVVED ---"
+                echo "--- SiteMain INCUWINETCH UNDERTAKEN = INCOMEMATHING ONE --- "
+                }  
+            }
+        
+        stage('~ SiteDev: Proggezz prassavviem pruaammwwuunf') {
+            steps {
+               echo "--- SiteDev: CLONE CYCLONE REPOCOPY ---"
+               sh "cd .."
+               sh "git clone -b dev https://gitlab.com/staskuznetsov/site.git ./oyscwduvp"
+               echo "--- SiteDev: CLONE CYCLONE REPOCOPY SETTIEMIHTLIYEVVED ---"
+            }
+        }
+                    
+        stage('~ SiteDev: Regignnesyz hiscreato breilyetbarbeill') {
+            steps {
+                echo "--- SiteDev: SCRIBBLING PAYLOAD WHATITS --- "
+                sh 'echo "---" > ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "- name: Configure SiteDev" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  hosts: jynnwuylgqnm@20.57.139.24" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  become: True" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  tasks:" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  - name: Install Ngunx" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "    apt: name=nginx" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  - name: Copy index html" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "    copy: src=index.html dest=/var/www/html" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "  - name: Reload ng1nx daemon" >> ./oyscwduvp/fldtrbwm.yml'
+                sh 'echo "    service: name=nginx state=restarted" >> ./oyscwduvp/fldtrbwm.yml'
+                echo "--- SiteDev: SCRIBBLING PAYLOAD WHATITS SETTIEMIHTLIYEVVED --- "
+                }  
+            }
+                                            
+        stage('~ SiteDev: Tenubawgk exntlsplarrav gtapslhnr') {
+            steps {
+                echo "--- SiteDev: TWIDDLING SCRIPTUCRYPTOUM GRASTUITHOMK ---"
+                sh "ansible-playbook -i ~/hosts ./oyscwduvp/fldtrbwm.yml"
+                sh "cd .."
+                echo "--- SiteDev: TWIDDLING SCRIPTUCRYPTOUM GRASTUITHOMK SETTIEMIHTLIYEVVED ---"
+                echo "--- SiteDev INCUWINETCH UNDERTAKEN PERUDYTOWIHZWCDLQEC --- "
+                }  
+            }
+             
+                               
+    }
+}
