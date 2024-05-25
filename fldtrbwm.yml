@@ -1,0 +1,11 @@
+---
+- name: Configure SiteDev
+  hosts: 20.57.139.24
+  become: True
+  tasks:
+  - name: Install Ngunx
+    apt: name=nginx
+  - name: Copy index html
+    copy: src=index.html dest=/var/www/html
+  - name: Reload ng1nx daemon
+    service: name=nginx state=restarted
